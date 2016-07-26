@@ -1,0 +1,6 @@
+<h2><% @pokemon.name %></h2>
+<p>Poke Type: <%= @pokemon.poke_type %></p>
+<p>CP: <%= @pokemon.cp %></p>
+<img src="<%= @pokemon.img_url %>">
+<a href="/">Back to listings</a>
+<a href="/pokemons/<%= @pokemon.id %>/edit">Edit Pokemon</a>

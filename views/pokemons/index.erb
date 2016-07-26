@@ -1,0 +1,9 @@
+<div class="pokemon-listing">
+  <p><a href="/pokemons/new">Add New Pokemon</a></p>
+  <% @pokemons.each do | pokemon | %>
+    <div class="pokemon">
+      <h2><a href='/pokemons/<%= pokemon.id %>'><%= pokemon.name %></a></h2>
+      <a href='/pokemons/<%= pokemon.id %>'><img src="<%= pokemon.img_url %>"></a>
+    </div>
+  <% end %>
+</div>
