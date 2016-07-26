@@ -1,13 +1,15 @@
-<h2>New Pokemon</h2>
+<div class="pokemon">
+  <h2>New Pokemon</h2>
 
-<form action="/pokemons" method="post">
-  <label>Name:</label>
-  <input name="pokemon[name]">
-  <label>Photo URL:</label>
-  <input name="pokemon[img_url]">
-  <label>CP:</label>
-  <input name="pokemon[cp]">
-  <label>Poke Type:</label>
-  <input name="pokemon[poke_type]">
-  <input type="submit" value="Add Pokemon">
-</form>
+  <form action="/pokemons" method="post">
+    <label>Name:</label>
+    <input name="pokemon[name]">
+    <label>Photo URL:</label>
+    <input name="pokemon[img_url]">
+    <label>CP:</label>
+    <input name="pokemon[cp]">
+    <label>Type:</label>
+    <input name="pokemon[poke_type]">
+    <input type="submit" value="Add Pokemon">
+  </form>
+</div>
