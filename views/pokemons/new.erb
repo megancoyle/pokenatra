@@ -10,6 +10,13 @@
     <input name="pokemon[cp]">
     <label>Type:</label>
     <input name="pokemon[poke_type]">
+    <label>Trainer:</label>
+    <select name="pokemon[trainer_id]">
+      <option value="" disabled selected>Select a Trainer</option>
+      <% @trainers.each do | trainer | %>
+          <option value="<%= trainer.id %>"><%= trainer.name %></option>
+      <% end %>
+    </select>
     <input type="submit" value="Add Pokemon">
   </form>
 </div>

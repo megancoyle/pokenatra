@@ -95,6 +95,7 @@ get '/pokemons' do
 end
 
 get '/pokemons/new' do
+  @trainers = Trainer.order(:name)
   erb :"pokemons/new"
 end
 
@@ -110,6 +111,9 @@ end
 
 get '/pokemons/:id/edit' do
   @pokemon = Pokemon.find(params[:id])
+  trainer = Pokemon.find(params[:id]).trainer_id
+  @current_trainer = Trainer.find(trainer)
+  @trainers = Trainer.order(:name)
   erb :"pokemons/edit"
 end
 

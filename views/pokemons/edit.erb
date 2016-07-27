@@ -10,6 +10,13 @@
     <input type="text" name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>">
     <label>CP:</label>
     <input type="text" name="pokemon[cp]" value="<%= @pokemon.cp %>">
+    <label>Trainer:</label>
+    <select name="pokemon[trainer_id]">
+      <option value="" disabled selected><%= @current_trainer.name %></option>
+      <% @trainers.each do | trainer | %>
+          <option value="<%= trainer.id %>"><%= trainer.name %></option>
+      <% end %>
+    </select>
     <label>Image URL:</label>
     <input type="text" name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
     <input type="submit" value="Update Pokemon">
