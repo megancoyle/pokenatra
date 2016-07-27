@@ -41,7 +41,7 @@ img {
     margin: 0 auto;
 }
 
-.pokemon, .trainer{
+.pokemon, .trainer, .team{
   min-width: 375px;
   background-color: rgb(255, 255, 255);
   padding: 10px;

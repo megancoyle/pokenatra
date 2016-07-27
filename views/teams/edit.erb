@@ -1,0 +1,16 @@
+<div class="team">
+  <h2>Edit Team</h2>
+
+  <form action="/teams/<%= @team.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <label>Team Name:</label>
+    <input type="text" name="team[name]" value="<%= @team.name %>">
+    <input type="submit" value="Update Team">
+  </form>
+
+  <h2>Delete Team</h2>
+  <form action="/teams/<%= @team.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
+</div>

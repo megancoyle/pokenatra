@@ -1,0 +1,6 @@
+<div class="containareon">
+  <h3>Team <%= @team.name %></h3>
+  <p>Trainers: <%= @trainers.join(", ") %></p>
+  <p><a href="/teams">Back to listings</a></p>
+  <p><a href="/teams/<%= @team.id %>/edit">Edit Team</a></p>
+</div>

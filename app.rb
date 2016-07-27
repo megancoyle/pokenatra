@@ -6,9 +6,47 @@ require 'active_record'
 require_relative 'db/connection'
 require_relative 'models/pokemon'
 require_relative 'models/trainer'
+require_relative 'models/team'
 
 get '/' do
   redirect '/pokemons'
+end
+
+get '/teams' do
+  @teams = Team.all
+  erb :"teams/index"
+end
+
+get '/teams/new' do
+  erb :"teams/new"
+end
+
+get '/teams/:id' do
+  @team = Team.find(params[:id])
+  @trainers = Team.find(params[:id]).trainers.pluck(:name)
+  erb :"teams/show"
+end
+
+post '/teams' do
+  @team = Team.create(params[:team])
+  redirect "/teams/#{@team.id}"
+end
+
+get '/teams/:id/edit' do
+  @team = Team.find(params[:id])
+  erb :"teams/edit"
+end
+
+put '/teams/:id' do
+  team = Team.find(params[:id])
+  team.update(params[:team])
+  redirect "/teams/#{team.id}"
+end
+
+delete '/teams/:id' do
+  team = Team.find(params[:id])
+  team.destroy
+  redirect '/teams'
 end
 
 get '/trainers' do
