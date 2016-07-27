@@ -8,6 +8,13 @@
     <input name="trainer[img_url]">
     <label>Level:</label>
     <input name="trainer[level]">
+    <label>Team:</label>
+    <select name="trainer[team_id]">
+      <option value="" disabled selected>Select a team</option>
+      <% @teams.each do | team | %>
+          <option value="<%= team.id %>"><%= team.name %></option>
+      <% end %>
+    </select>
     <input type="submit" value="Add Trainer">
   </form>
 </div>

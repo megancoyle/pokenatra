@@ -9,7 +9,7 @@ require_relative 'models/trainer'
 require_relative 'models/team'
 
 get '/' do
-  redirect '/pokemons'
+  erb :index
 end
 
 get '/teams' do
@@ -55,7 +55,8 @@ get '/trainers' do
 end
 
 get '/trainers/new' do
-  erb :"artists/new"
+  @teams = Team.all
+  erb :"trainers/new"
 end
 
 get '/trainers/:id' do
@@ -72,7 +73,8 @@ end
 
 get '/trainers/:id/edit' do
   @trainer = Trainer.find(params[:id])
-  erb :"artists/edit"
+  @teams = Team.all
+  erb :"trainers/edit"
 end
 
 put '/trainers/:id' do
