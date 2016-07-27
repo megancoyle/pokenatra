@@ -17,8 +17,8 @@ Pokemon.create(name: "Gengar", cp: rand(800), poke_type: "ghost poison", img_url
 Pokemon.create(name: "Blastoise", cp: rand(800), poke_type: "water", img_url: "https://img.pokemondb.net/artwork/blastoise.jpg", trainer_id: 1)
 
 Trainer.destroy_all
-Trainer.create(name: "Ash", level: 20, img_url: "https://img.pokemondb.net/artwork/charmander.jpg", team_id: 1)
-Trainer.create(name: "Missy", level: 30, img_url: "https://img.pokemondb.net/artwork/squirtle.jpg", team_id: 2)
+Trainer.create(name: "Ash", level: 20, img_url: "http://pokemondungeon.net/wp-content/uploads/2013/01/Ash-ash-ketchum.jpg", team_id: 1)
+Trainer.create(name: "Misty", level: 30, img_url: "http://vignette2.wikia.nocookie.net/pokemon/images/a/a0/Scary_Misty.jpg/revision/latest?cb=20120128180955", team_id: 2)
 
 Team.destroy_all
 Team.create(name: "Blue")
