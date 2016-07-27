@@ -61,6 +61,7 @@ end
 get '/trainers/:id' do
   @trainer = Trainer.find(params[:id])
   @pokemons = Trainer.find(params[:id]).pokemons.pluck(:name)
+  @team = Team.find(@trainer.team_id)
   erb :"trainers/show"
 end
 

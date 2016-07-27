@@ -1,6 +1,7 @@
 <div class="containareon">
   <h3><%= @trainer.name %></h3>
   <p>Level: <%= @trainer.level %></p>
+  <p>Team: <%= @team.name %></p>
   <img src="<%= @trainer.img_url %>">
   <p>Pokemon: <%= @pokemons.join(", ") %></p>
   <p><a href="/trainers">Back to listings</a></p>
